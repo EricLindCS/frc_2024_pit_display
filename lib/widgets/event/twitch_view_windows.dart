@@ -14,14 +14,15 @@ class TwitchViewWindows extends StatefulWidget {
 
 class _TwitchViewWindowsState extends State<TwitchViewWindows> {
   final _controller = WebviewController();
-  String _twitchChannel = '';
+  String _twitchChannel = 'https://www.twitch.tv/firstinspires1 ';
 
   @override
   void initState() {
     super.initState();
 
     SharedPreferences.getInstance().then((prefs) {
-      _twitchChannel = prefs.getString('twitchChannel') ?? '';
+      _twitchChannel = prefs.getString('twitchChannel') ??
+          'https://www.twitch.tv/firstinspires1';
       initPlatformState();
     });
   }
@@ -38,8 +39,8 @@ class _TwitchViewWindowsState extends State<TwitchViewWindows> {
       await _controller.setBackgroundColor(Colors.transparent);
       await _controller.setPopupWindowPolicy(WebviewPopupWindowPolicy.deny);
       await _controller.loadUrl(
-          'https://player.twitch.tv/?channel=$_twitchChannel&parent=pitdisplay.rangerrobotics.org');
-
+          //'https://player.twitch.tv/?channel=$_twitchChannel&parent=pitdisplay.rangerrobotics.org');
+          'https://www.twitch.tv/firstinspires1');
       if (!mounted) {
         return;
       }

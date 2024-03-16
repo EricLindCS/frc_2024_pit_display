@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pit_display/pages/home_page.dart';
-import 'package:pit_display/services/systems_state.dart';
 import 'package:pit_display/widgets/keyboard_shortcuts.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -23,8 +22,6 @@ void main() async {
     await windowManager.show();
     await windowManager.focus();
   });
-
-  SystemsState.init();
 
   runApp(const PitDisplay());
 }

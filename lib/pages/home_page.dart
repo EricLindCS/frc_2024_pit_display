@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pit_display/pages/event_page.dart';
 import 'package:pit_display/pages/systems_page.dart';
+import 'package:pit_display/pages/twitch_page.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -65,6 +67,11 @@ class _HomePageState extends State<HomePage> {
                       icon: Icon(Icons.fact_check_outlined),
                       selectedIcon: Icon(Icons.fact_check),
                       label: Text('Systems'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.photo_camera_front_outlined),
+                      selectedIcon: Icon(Icons.photo_camera_front),
+                      label: Text('Stream'),
                     ),
                   ],
                 ),
@@ -150,6 +157,7 @@ class _HomePageState extends State<HomePage> {
                 children: const [
                   EventPage(),
                   SystemsPage(),
+                  TwitchPage(),
                 ],
               ),
             ),

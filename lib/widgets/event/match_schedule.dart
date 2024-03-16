@@ -100,7 +100,7 @@ class _MatchScheduleState extends State<MatchSchedule> {
             SizedBox(
               width: 48,
               child: Center(
-                child: Text(match.statboticsPred.toString()),
+                child: _teamNumber(match.redTeams[1], colorScheme.error),
               ),
             ),
             SizedBox(
@@ -126,6 +126,15 @@ class _MatchScheduleState extends State<MatchSchedule> {
               width: 48,
               child: Center(
                 child: _teamNumber(match.blueTeams[2], colorScheme.primary),
+              ),
+            ),
+            SizedBox(
+              width: 600,
+              child: Center(
+                child: Text(
+                  'Statbotics Prediction: Win Percent: ${((match.weAreRed != null) ? (match.weAreRed! ? match.statboticsPred.toString() : 100 - match.statboticsPred) : "Statbotics Err")}',
+                  textScaleFactor: 0.5,
+                ),
               ),
             ),
           ],

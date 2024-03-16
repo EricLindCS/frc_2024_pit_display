@@ -1,35 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:pit_display/widgets/event/event_match_schedule.dart';
-import 'package:pit_display/widgets/event/match_schedule.dart';
-import 'package:pit_display/widgets/event/ranking_card.dart';
 import 'package:pit_display/widgets/event/twitch_view_windows.dart';
 
-class EventPage extends StatelessWidget {
-  const EventPage({super.key});
+class TwitchPage extends StatelessWidget {
+  const TwitchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        const Expanded(
-          flex: 3,
-          child: Column(
-            children: [
-              Expanded(
-                flex: 35,
-                child: RankingCard(),
-              ),
-              Expanded(
-                flex: 65,
-                child: MatchSchedule(),
-              ),
-            ],
-          ),
-        ),
-        /*
         Expanded(
           flex: 7,
           child: Column(
@@ -49,11 +30,9 @@ class EventPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const Expanded(child: EventMatchSchedule()),
             ],
           ),
         ),
-        */
       ],
     );
   }

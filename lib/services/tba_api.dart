@@ -17,7 +17,7 @@ class TBA {
     String event = _prefs?.getString('eventKey') ?? '';
 
     var url = Uri.parse(
-        'https://www.thebluealliance.com/api/v3/team/frc$team/event/$event/status');
+        'https://www.thebluealliance.com/api/v3/team/frc2584/event/2024cala/status');
     var response = await http.get(url,
         headers: {'accept': 'application/json', 'X-TBA-Auth-Key': _apiKey});
 
@@ -97,10 +97,9 @@ class TBA {
       String key = matchJson['key'];
       int statpred = 0;
       if (key != null) {
-        var s_url = Uri.parse(
-            'https://www.thebluealliance.com/api/v3/team/frc2584/event/2024cala/matches');
+        var s_url = Uri.parse('https://api.statbotics.io/v3/match/$key');
         var s_response =
-            await http.get(url, headers: {'accept': 'application/json'});
+            await http.get(s_url, headers: {'accept': 'application/json'});
 
         Map<String, dynamic> s_responseLst = jsonDecode(s_response.body);
         //s_responseJson = s_responseLst.cast();
