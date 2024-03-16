@@ -112,9 +112,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Generate icons
-        run: dart run flutter_launcher_icons
-
       - name: Build app
         run: flutter build ${{ matrix.build-option }}
 
