@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pit_display/widgets/event/event_match_schedule.dart';
 import 'package:pit_display/widgets/event/match_schedule.dart';
 import 'package:pit_display/widgets/event/ranking_card.dart';
-import 'package:pit_display/widgets/event/twitch_view_windows.dart';
 
 class EventPage extends StatelessWidget {
   const EventPage({super.key});

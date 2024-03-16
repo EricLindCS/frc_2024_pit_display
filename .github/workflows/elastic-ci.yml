@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  FLUTTER_VERSION: 2.18.X
+  FLUTTER_VERSION: 3.19.0
 
 jobs:
   formatting-analysis:
@@ -28,7 +28,6 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: 'any'
           cache: true
           cache-path: ${{ runner.tool_cache }}/flutter/linux
 
@@ -55,7 +54,6 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: 'any'
           cache: true
           cache-path: ${{ runner.tool_cache }}/flutter/linux
 
@@ -108,7 +106,6 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: 'any'
           cache: true
           cache-path: ${{ runner.tool_cache }}/flutter/${{ matrix.build-option }}
 

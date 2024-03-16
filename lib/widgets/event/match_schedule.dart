@@ -133,7 +133,7 @@ class _MatchScheduleState extends State<MatchSchedule> {
               child: Center(
                 child: Text(
                   'Statbotics Prediction: Win Percent: ${((match.weAreRed != null) ? (match.weAreRed! ? match.statboticsPred.toString() : 100 - match.statboticsPred) : "Statbotics Err")}',
-                  textScaleFactor: 0.5,
+                  textScaler: const TextScaler.linear(0.5),
                 ),
               ),
             ),
